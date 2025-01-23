@@ -7,6 +7,8 @@ const signUpController = async (req, res) => {
     try {
       
         const { username, email, password } = req.body;
+
+        console.log(req.body);
         
         const existingUser = await User.findOne({
              email: email 
